@@ -2,22 +2,19 @@
   <div>
     <MetricCards />
     <Divider />
-
-    <div class="flex flex-row flex-wrap flex-grow mt-2">
-      <div class="w-full md:w-1/2 p-3">
-        HELLO
-      </div>
-    </div>
+    <GraphCards />
   </div>
 </template>
 
 <script>
-import MetricCards from '~/components/Demo/MetricCards.vue';
+import MetricCards from '~/components/demo/MetricCards.vue';
+import GraphCards from '~/components/demo/GraphCards.vue';
 import Divider from '~/components/Divider.vue';
 
 export default {
   components: {
     MetricCards,
+    GraphCards,
     Divider
   }
 };
