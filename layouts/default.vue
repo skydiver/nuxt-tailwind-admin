@@ -22,6 +22,7 @@ export default {
     Footer
   },
   head: {
+    title: 'Nuxt.js Admin Starter',
     bodyAttrs: {
       class: 'bg-grey-lightest font-sans leading-normal tracking-normal'
     }

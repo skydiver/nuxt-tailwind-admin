@@ -8,7 +8,7 @@
           class="text-black text-base xl:text-xl no-underline hover:no-underline font-bold"
           href="#"
         >
-          <i class="fas fa-sun text-orange-dark pr-3"></i> Admin Day Mode
+          <i class="fas fa-sun text-orange-dark pr-3"></i> Nuxt.js Admin Starter
         </a>
       </div>
       <div class="w-1/2 pr-0">
