@@ -2,6 +2,10 @@
 
 > Nuxt.js + Tailwind CSS Admin starter
 
+## Introduction
+
+This is a Nuxt.js starter using [Admin Template Day](https://www.tailwindtoolbox.com/templates/admin-template-day) from [Tailwind Toolbox](https://www.tailwindtoolbox.com/).
+
 ## Build Setup
 
 ``` bash
@@ -18,5 +22,3 @@ $ npm start
 # generate static project
 $ npm run generate
 ```
-
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
