@@ -21,11 +21,36 @@ export default {
     Nav,
     Footer
   },
-  head: {
-    title: 'Nuxt.js Admin Starter',
-    bodyAttrs: {
-      class: 'bg-grey-lightest font-sans leading-normal tracking-normal'
+  computed: {
+    darkMode() {
+      return this.$store.state.darkMode;
+    },
+    bodyClass() {
+      const defaultClass = 'font-sans leading-normal tracking-normal';
+      return this.darkMode
+        ? `bg-black-alt ${defaultClass}`
+        : `bg-grey-lightest ${defaultClass}`;
     }
+  },
+  head() {
+    return {
+      title: 'Nuxt.js Admin Starter',
+      bodyAttrs: {
+        class: this.bodyClass
+      }
+    };
   }
 };
 </script>
+
+<style>
+.bg-black-alt {
+  background: #191919;
+}
+.text-black-alt {
+  color: #191919;
+}
+.border-black-alt {
+  border-color: #191919;
+}
+</style>

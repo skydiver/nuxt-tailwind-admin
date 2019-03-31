@@ -1,19 +1,20 @@
 <template>
-  <nav id="header" class="bg-white fixed w-full z-10 pin-t shadow">
+  <nav id="header" :class="bgColor" class="fixed w-full z-10 pin-t shadow">
     <div
       class="w-full container mx-auto flex flex-wrap items-center mt-0 pt-3 pb-3 md:pb-0"
     >
       <div class="w-1/2 pl-2 md:pl-0">
         <a
-          class="text-black text-base xl:text-xl no-underline hover:no-underline font-bold"
+          :class="textColor"
+          class=" text-base xl:text-xl no-underline hover:no-underline font-bold"
           href="#"
         >
-          <i class="fas fa-sun text-orange-dark pr-3"></i> Nuxt.js Admin Starter
+          <i :class="iconColor" class="fas pr-3"></i> Nuxt.js Admin Starter
         </a>
       </div>
       <div class="w-1/2 pr-0">
         <div class="flex relative inline-block float-right">
-          <div class="relative text-sm">
+          <div :class="textColorAlt" class="relative text-sm">
             <button
               id="userButton"
               class="flex items-center focus:outline-none mr-3"
@@ -23,8 +24,11 @@
                 src="http://i.pravatar.cc/300"
                 alt="Avatar of User"
               />
-              <span class="hidden md:inline-block">Hi, User </span>
+              <span :class="textColorAlt" class="hidden md:inline-block">
+                Hi, User
+              </span>
               <svg
+                :class="avatarTextColor"
                 class="pl-2 h-2"
                 version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
@@ -41,28 +45,32 @@
             </button>
             <div
               id="userMenu"
-              class="bg-white rounded shadow-md mt-2 absolute mt-12 pin-t pin-r min-w-full overflow-auto z-30 invisible"
+              :class="bgColor"
+              class="rounded shadow-md mt-2 absolute mt-12 pin-t pin-r min-w-full overflow-auto z-30 invisible"
             >
               <ul class="list-reset">
                 <li>
                   <a
                     href="#"
-                    class="px-4 py-2 block text-black hover:bg-grey-light no-underline hover:no-underline"
+                    :class="linksColor"
+                    class="px-4 py-2 block no-underline hover:no-underline"
                     >My account</a
                   >
                 </li>
                 <li>
                   <a
                     href="#"
-                    class="px-4 py-2 block text-black hover:bg-grey-light no-underline hover:no-underline"
+                    :class="linksColor"
+                    class="px-4 py-2 block no-underline hover:no-underline"
                     >Notifications</a
                   >
                 </li>
-                <li><hr class="border-t mx-2 border-grey-ligght" /></li>
+                <li><hr class="border-t mx-2 border-grey-light" /></li>
                 <li>
                   <a
                     href="#"
-                    class="px-4 py-2 block text-black hover:bg-grey-light no-underline hover:no-underline"
+                    :class="linksColor"
+                    class="px-4 py-2 block no-underline hover:no-underline"
                     >Logout</a
                   >
                 </li>
@@ -73,7 +81,8 @@
           <div class="block lg:hidden pr-4">
             <button
               id="nav-toggle"
-              class="flex items-center px-3 py-2 border rounded text-grey border-grey-dark hover:text-black hover:border-teal appearance-none focus:outline-none"
+              :class="hoverColor"
+              class="flex items-center px-3 py-2 border rounded text-grey border-grey-dark hover:border-teal appearance-none focus:outline-none"
             >
               <svg
                 class="fill-current h-3 w-3"
@@ -90,22 +99,28 @@
 
       <div
         id="nav-content"
-        class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-white z-20"
+        :class="bgColor"
+        class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 z-20"
       >
         <ul class="list-reset lg:flex flex-1 items-center px-4 md:px-0">
           <li class="mr-6 my-2 md:my-0">
             <a
               href="#"
-              class="block py-1 md:py-3 pl-1 align-middle text-orange-dark no-underline hover:text-black border-b-2 border-orange-dark hover:border-orange-dark"
+              :class="menuActiveLinkColor"
+              class="block py-1 md:py-3 pl-1 align-middle no-underline border-b-2"
             >
-              <i class="fas fa-home fa-fw mr-3 text-orange-dark"></i
+              <i :class="menuActiveIconColor" class="fas fa-home fa-fw mr-3"></i
               ><span class="pb-1 md:pb-0 text-sm">Home</span>
             </a>
           </li>
           <li class="mr-6 my-2 md:my-0">
             <a
               href="#"
-              class="block py-1 md:py-3 pl-1 align-middle text-grey no-underline hover:text-black border-b-2 border-white hover:border-pink"
+              :class="[
+                menuLinksColor,
+                darkMode ? 'hover:border-pink-light' : 'hover:border-pink'
+              ]"
+              class="block py-1 md:py-3 pl-1 align-middle text-grey no-underline border-b-2"
             >
               <i class="fas fa-tasks fa-fw mr-3"></i
               ><span class="pb-1 md:pb-0 text-sm">Tasks</span>
@@ -114,7 +129,11 @@
           <li class="mr-6 my-2 md:my-0">
             <a
               href="#"
-              class="block py-1 md:py-3 pl-1 align-middle text-grey no-underline hover:text-black border-b-2 border-white hover:border-purple"
+              :class="[
+                menuLinksColor,
+                darkMode ? 'hover:border-purple-light' : 'hover:border-purple'
+              ]"
+              class="block py-1 md:py-3 pl-1 align-middle text-grey no-underline border-b-2"
             >
               <i class="fa fa-envelope fa-fw mr-3"></i
               ><span class="pb-1 md:pb-0 text-sm">Messages</span>
@@ -123,7 +142,11 @@
           <li class="mr-6 my-2 md:my-0">
             <a
               href="#"
-              class="block py-1 md:py-3 pl-1 align-middle text-grey no-underline hover:text-black border-b-2 border-white hover:border-green"
+              :class="[
+                menuLinksColor,
+                darkMode ? 'hover:border-green-light' : 'hover:border-green'
+              ]"
+              class="block py-1 md:py-3 pl-1 align-middle text-grey no-underline border-b-2"
             >
               <i class="fas fa-chart-area fa-fw mr-3"></i
               ><span class="pb-1 md:pb-0 text-sm">Analytics</span>
@@ -132,7 +155,11 @@
           <li class="mr-6 my-2 md:my-0">
             <a
               href="#"
-              class="block py-1 md:py-3 pl-1 align-middle text-grey no-underline hover:text-black border-b-2 border-white hover:border-red"
+              :class="[
+                menuLinksColor,
+                darkMode ? 'hover:border-red-light' : 'hover:border-red'
+              ]"
+              class="block py-1 md:py-3 pl-1 align-middle text-grey no-underline border-b-2"
             >
               <i class="fa fa-wallet fa-fw mr-3"></i
               ><span class="pb-1 md:pb-0 text-sm">Payments</span>
@@ -144,14 +171,16 @@
           <input
             type="search"
             placeholder="Search"
-            class="w-full bg-grey-lightest text-sm text-grey-darkest transition border focus:outline-none focus:border-grey-darker rounded py-1 px-2 pl-10 appearance-none leading-normal"
+            :class="searchColor"
+            class="w-full text-sm transition border rounded py-1 px-2 pl-10 appearance-none leading-normal"
           />
           <div
-            class="absolute search-icon"
+            class="absolute sea,rch-icon"
             style="top: 0.375rem;left: 1.75rem;"
           >
             <svg
-              class="fill-current pointer-events-none text-grey-darkest w-4 h-4"
+              :class="searchIconColor"
+              class="fill-current pointer-events-none w-4 h-4"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
             >
@@ -168,6 +197,60 @@
 
 <script>
 export default {
+  computed: {
+    darkMode() {
+      return this.$store.state.darkMode;
+    },
+    bgColor() {
+      return this.darkMode ? 'bg-black' : 'bg-white';
+    },
+    textColor() {
+      return this.darkMode ? 'text-grey-lightest' : 'text-black';
+    },
+    textColorAlt() {
+      return this.darkMode ? 'text-grey-lightest' : '';
+    },
+    linksColor() {
+      return this.darkMode
+        ? 'text-grey-lightest hover:bg-grey-darkest'
+        : 'text-black hover:bg-grey-light';
+    },
+    hoverColor() {
+      return this.darkMode ? 'hover:text-grey-lightest' : 'hover:text-black';
+    },
+    iconColor() {
+      return this.darkMode
+        ? `text-blue-light ${this.icon}`
+        : `text-orange-dark  ${this.icon}`;
+    },
+    icon() {
+      return this.darkMode ? 'fa-moon' : 'fa-sun';
+    },
+    avatarTextColor() {
+      return this.darkMode ? 'fill-current text-grey-lightest' : '';
+    },
+    searchColor() {
+      return this.darkMode
+        ? 'bg-black text-grey-light border-grey-darkest focus:outline-none focus:border-grey-dark'
+        : 'bg-grey-lightest text-grey-darkest focus:outline-none focus:border-grey-darker';
+    },
+    searchIconColor() {
+      return this.darkMode ? 'text-grey' : 'text-grey-darkest';
+    },
+    menuActiveLinkColor() {
+      return this.darkMode
+        ? 'text-blue-light hover:text-grey-lightest border-blue-light hover:border-blue-light'
+        : 'text-orange-dark hover:text-black border-orange-dark hover:border-orange-dark';
+    },
+    menuActiveIconColor() {
+      return this.darkMode ? 'text-blue-light' : 'text-orange-dark';
+    },
+    menuLinksColor() {
+      return this.darkMode
+        ? 'hover:text-grey-lightest border-black'
+        : 'hover:text-black border-white';
+    }
+  },
   mounted() {
     const userMenuDiv = document.getElementById('userMenu');
     const userMenu = document.getElementById('userButton');
