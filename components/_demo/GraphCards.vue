@@ -8,10 +8,10 @@
 </template>
 
 <script>
-import Graph1 from '~/components/demo/Graph1.vue';
-import Graph2 from '~/components/demo/Graph2.vue';
-import Graph3 from '~/components/demo/Graph3.vue';
-import Graph4 from '~/components/demo/Graph4.vue';
+import Graph1 from '~/components/_demo/Graph1.vue';
+import Graph2 from '~/components/_demo/Graph2.vue';
+import Graph3 from '~/components/_demo/Graph3.vue';
+import Graph4 from '~/components/_demo/Graph4.vue';
 
 export default {
   components: {

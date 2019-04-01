@@ -8,9 +8,9 @@
 </template>
 
 <script>
-import MetricCards from '~/components/demo/MetricCards.vue';
-import GraphCards from '~/components/demo/GraphCards.vue';
-import Table from '~/components/demo/Table.vue';
+import MetricCards from '~/components/_demo/MetricCards.vue';
+import GraphCards from '~/components/_demo/GraphCards.vue';
+import Table from '~/components/_demo/Table.vue';
 import Divider from '~/components/layout/Divider.vue';
 
 export default {
