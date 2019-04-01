@@ -49,7 +49,7 @@
 </template>
 
 <script>
-import MetricCard from '~/components/MetricCard.vue';
+import MetricCard from '~/components/widgets/MetricCard.vue';
 
 export default {
   components: {
