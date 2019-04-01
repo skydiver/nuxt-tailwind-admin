@@ -1,21 +1,18 @@
 <template>
   <div class="w-full md:w-1/2 xl:w-1/3 p-3">
-    <div class="bg-white border rounded shadow">
-      <div class="border-b p-3">
-        <h5 class="uppercase text-grey-dark">Graph</h5>
-      </div>
-      <div class="p-5">
-        <BarChart :height="200" :options="options" :chartdata="chartdata" />
-      </div>
-    </div>
+    <Box title="Graph">
+      <BarChart :height="200" :options="options" :chartdata="chartdata" />
+    </Box>
   </div>
 </template>
 
 <script>
+import Box from '~/components/containers/Box.vue';
 import BarChart from '~/components/charts/BarChart.vue';
 
 export default {
   components: {
+    Box,
     BarChart
   },
   data() {
