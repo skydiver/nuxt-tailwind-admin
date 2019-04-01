@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "name": "nuxtjs-sandbox",
+  "builds": [
+    { "src": "package.json", "use": "@now/static-build" }
+  ],
+  "alias": [
+    "nuxt-admin.now.sh"
+  ]
+}
