@@ -18,7 +18,7 @@ export default {
   head: {
     title: 'Nuxt.js Admin Starter',
     bodyAttrs: {
-      class: 'bg-grey-lightest font-sans leading-normal tracking-normal'
+      class: 'bg-gray-100 font-sans leading-normal tracking-normal'
     }
   }
 };

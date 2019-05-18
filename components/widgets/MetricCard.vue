@@ -8,11 +8,11 @@
           </div>
         </div>
         <div class="flex-1 text-right md:text-center">
-          <h5 class="uppercase text-grey">{{ title }}</h5>
-          <h3 class="text-3xl">
+          <h5 class="font-bold uppercase text-gray-500">{{ title }}</h5>
+          <h3 class="font-bold text-3xl">
             {{ value }}
-            <span v-if="showArrow" :class="bgArrowColor">
-              <i :class="arrowIcon" class="fas"></i
+            <span v-if="showArrow" :class="bgArrowColor"
+              ><i :class="arrowIcon" class="fas"></i
             ></span>
           </h3>
         </div>
@@ -26,19 +26,19 @@ export default {
   props: {
     icon: {
       type: String,
-      default: 'fa-tachometer-alt'
+      required: true
     },
     iconColor: {
       type: String,
-      default: 'grey-dark'
+      default: 'gray-600'
     },
     title: {
       type: String,
-      default: 'Metric Card'
+      required: true
     },
     value: {
       type: String,
-      default: '$0'
+      default: ''
     },
     arrow: {
       type: String,
@@ -46,7 +46,7 @@ export default {
     },
     arrowColor: {
       type: String,
-      default: 'grey'
+      default: 'gray-600'
     }
   },
 

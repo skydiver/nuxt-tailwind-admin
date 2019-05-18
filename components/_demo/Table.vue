@@ -1,20 +1,18 @@
 <template>
   <div class="w-full p-3">
-    <!--Table Card-->
     <div class="bg-white border rounded shadow">
       <div class="border-b p-3">
-        <h5 class="uppercase text-grey-dark">Table</h5>
+        <h5 class="font-bold uppercase text-gray-600">Table</h5>
       </div>
       <div class="p-5">
-        <table class="w-full p-5 text-grey-darker">
+        <table class="w-full p-5 text-gray-700">
           <thead>
             <tr>
-              <th class="text-left text-blue-darkest">Name</th>
-              <th class="text-left text-blue-darkest">Side</th>
-              <th class="text-left text-blue-darkest">Role</th>
+              <th class="text-left text-blue-900">Name</th>
+              <th class="text-left text-blue-900">Side</th>
+              <th class="text-left text-blue-900">Role</th>
             </tr>
           </thead>
-
           <tbody>
             <tr>
               <td>Obi Wan Kenobi</td>
@@ -33,10 +31,8 @@
             </tr>
           </tbody>
         </table>
-
         <p class="py-2"><a href="#">See More issues...</a></p>
       </div>
     </div>
-    <!--/table Card-->
   </div>
 </template>

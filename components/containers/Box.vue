@@ -1,7 +1,7 @@
 <template>
   <div class="bg-white border rounded shadow">
     <div class="border-b p-3">
-      <h5 class="uppercase text-grey-dark">{{ title }}</h5>
+      <h5 class="font-bold uppercase text-gray-600">{{ title }}</h5>
     </div>
     <div class="p-5">
       <slot></slot>

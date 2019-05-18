@@ -1,14 +1,14 @@
 <template>
-  <nav id="header" class="bg-white fixed w-full z-10 pin-t shadow">
+  <nav id="header" class="bg-white fixed w-full z-10 top-0 shadow">
     <div
       class="w-full container mx-auto flex flex-wrap items-center mt-0 pt-3 pb-3 md:pb-0"
     >
       <div class="w-1/2 pl-2 md:pl-0">
         <a
-          class="text-black text-base xl:text-xl no-underline hover:no-underline font-bold"
+          class="text-gray-900 text-base xl:text-xl no-underline hover:no-underline font-bold"
           href="#"
         >
-          <i class="fas fa-sun text-orange-dark pr-3"></i> Nuxt.js Admin Starter
+          <i class="fas fa-sun text-orange-600 pr-3"></i> Admin Day Mode
         </a>
       </div>
       <div class="w-1/2 pr-0">
@@ -41,28 +41,28 @@
             </button>
             <div
               id="userMenu"
-              class="bg-white rounded shadow-md mt-2 absolute mt-12 pin-t pin-r min-w-full overflow-auto z-30 invisible"
+              class="bg-white rounded shadow-md mt-2 absolute mt-12 top-0 right-0 min-w-full overflow-auto z-30 invisible"
             >
               <ul class="list-reset">
                 <li>
                   <a
                     href="#"
-                    class="px-4 py-2 block text-black hover:bg-grey-light no-underline hover:no-underline"
+                    class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline"
                     >My account</a
                   >
                 </li>
                 <li>
                   <a
                     href="#"
-                    class="px-4 py-2 block text-black hover:bg-grey-light no-underline hover:no-underline"
+                    class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline"
                     >Notifications</a
                   >
                 </li>
-                <li><hr class="border-t mx-2 border-grey-ligght" /></li>
+                <li><hr class="border-t mx-2 border-gray-400" /></li>
                 <li>
                   <a
                     href="#"
-                    class="px-4 py-2 block text-black hover:bg-grey-light no-underline hover:no-underline"
+                    class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline"
                     >Logout</a
                   >
                 </li>
@@ -73,7 +73,7 @@
           <div class="block lg:hidden pr-4">
             <button
               id="nav-toggle"
-              class="flex items-center px-3 py-2 border rounded text-grey border-grey-dark hover:text-black hover:border-teal appearance-none focus:outline-none"
+              class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-900 hover:border-teal-500 appearance-none focus:outline-none"
             >
               <svg
                 class="fill-current h-3 w-3"
@@ -96,16 +96,16 @@
           <li class="mr-6 my-2 md:my-0">
             <a
               href="#"
-              class="block py-1 md:py-3 pl-1 align-middle text-orange-dark no-underline hover:text-black border-b-2 border-orange-dark hover:border-orange-dark"
+              class="block py-1 md:py-3 pl-1 align-middle text-orange-600 no-underline hover:text-gray-900 border-b-2 border-orange-600 hover:border-orange-600"
             >
-              <i class="fas fa-home fa-fw mr-3 text-orange-dark"></i
+              <i class="fas fa-home fa-fw mr-3 text-orange-600"></i
               ><span class="pb-1 md:pb-0 text-sm">Home</span>
             </a>
           </li>
           <li class="mr-6 my-2 md:my-0">
             <a
               href="#"
-              class="block py-1 md:py-3 pl-1 align-middle text-grey no-underline hover:text-black border-b-2 border-white hover:border-pink"
+              class="block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-900 border-b-2 border-white hover:border-pink-500"
             >
               <i class="fas fa-tasks fa-fw mr-3"></i
               ><span class="pb-1 md:pb-0 text-sm">Tasks</span>
@@ -114,7 +114,7 @@
           <li class="mr-6 my-2 md:my-0">
             <a
               href="#"
-              class="block py-1 md:py-3 pl-1 align-middle text-grey no-underline hover:text-black border-b-2 border-white hover:border-purple"
+              class="block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-900 border-b-2 border-white hover:border-purple-500"
             >
               <i class="fa fa-envelope fa-fw mr-3"></i
               ><span class="pb-1 md:pb-0 text-sm">Messages</span>
@@ -123,7 +123,7 @@
           <li class="mr-6 my-2 md:my-0">
             <a
               href="#"
-              class="block py-1 md:py-3 pl-1 align-middle text-grey no-underline hover:text-black border-b-2 border-white hover:border-green"
+              class="block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-900 border-b-2 border-white hover:border-green-500"
             >
               <i class="fas fa-chart-area fa-fw mr-3"></i
               ><span class="pb-1 md:pb-0 text-sm">Analytics</span>
@@ -132,7 +132,7 @@
           <li class="mr-6 my-2 md:my-0">
             <a
               href="#"
-              class="block py-1 md:py-3 pl-1 align-middle text-grey no-underline hover:text-black border-b-2 border-white hover:border-red"
+              class="block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-900 border-b-2 border-white hover:border-red-500"
             >
               <i class="fa fa-wallet fa-fw mr-3"></i
               ><span class="pb-1 md:pb-0 text-sm">Payments</span>
@@ -144,14 +144,14 @@
           <input
             type="search"
             placeholder="Search"
-            class="w-full bg-grey-lightest text-sm text-grey-darkest transition border focus:outline-none focus:border-grey-darker rounded py-1 px-2 pl-10 appearance-none leading-normal"
+            class="w-full bg-gray-100 text-sm text-gray-800 transition border focus:outline-none focus:border-gray-700 rounded py-1 px-2 pl-10 appearance-none leading-normal"
           />
           <div
             class="absolute search-icon"
             style="top: 0.375rem;left: 1.75rem;"
           >
             <svg
-              class="fill-current pointer-events-none text-grey-darkest w-4 h-4"
+              class="fill-current pointer-events-none text-gray-800 w-4 h-4"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
             >
