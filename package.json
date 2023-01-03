@@ -16,7 +16,7 @@
   "dependencies": {
     "chart.js": "^2.8.0",
     "cross-env": "^5.2.0",
-    "nuxt": "^2.8.1",
+    "nuxt": "^2.15.8",
     "vue-chartjs": "^3.4.2"
   },
   "devDependencies": {
